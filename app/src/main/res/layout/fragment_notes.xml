@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".NotesFragment">
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guidelineTopMargin"
+                                          android:orientation="horizontal" app:layout_constraintGuide_percent="0.05"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guidelinBottomMargin"
+                                          android:orientation="horizontal" app:layout_constraintGuide_percent="0.95"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guidelineLeftMargin"
+                                          android:orientation="vertical" app:layout_constraintGuide_percent="0.05"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guidelineRightMargin"
+                                          android:orientation="vertical" app:layout_constraintGuide_percent="0.95"/>
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeftMargin"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTopMargin"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRightMargin"
+            android:id="@+id/recyclerViewNotes"
+            android:layout_marginTop="8dp"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="1.0"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/guidelinBottomMargin">
+    </android.support.v7.widget.RecyclerView>
+    <android.support.design.widget.FloatingActionButton
+            android:src="@drawable/ic_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true" android:focusable="true" android:id="@+id/floatingActionButtonAdd"
+            app:layout_constraintBottom_toTopOf="@+id/guidelinBottomMargin"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRightMargin"/>
+</android.support.constraint.ConstraintLayout>

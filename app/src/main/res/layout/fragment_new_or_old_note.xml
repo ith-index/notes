@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        tools:context=".NoteFragment">
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guidelineTopMargin"
+                                          android:orientation="horizontal" app:layout_constraintGuide_percent="0.05"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guidelineBottomMargin"
+                                          android:orientation="horizontal" app:layout_constraintGuide_percent="0.95"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guidelineLeftMargin"
+                                          android:orientation="vertical" app:layout_constraintGuide_percent="0.05"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guidelineRightMargin"
+                                          android:orientation="vertical" app:layout_constraintGuide_percent="0.95"/>
+    <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeftMargin"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTopMargin"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRightMargin"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineBottomMargin"
+    >
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <EditText
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/editTextTitle" android:hint="@string/hint_title"
+                    tools:ignore="Autofill" android:textStyle="bold"/>
+            <EditText
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/editTextContent" android:hint="@string/hint_content"
+                    tools:ignore="Autofill"/>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
